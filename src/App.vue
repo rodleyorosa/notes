@@ -33,10 +33,16 @@ function cancelModal() {
 }
 
 function addNote(newNote) {
+  let objectDate = new Date();
+  let day = objectDate.getDate();
+  let month = objectDate.getMonth();
+  let year = objectDate.getFullYear();
+  let date = day + '/' + month + '/' + year
+
   notes.value.push({
     id: Math.floor(Math.random() * 1000000),
     text: newNote,
-    date: new Date(),
+    date: date,
     // bgColor: ,
   })
 
